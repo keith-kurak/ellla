@@ -6,6 +6,16 @@ import { useEffect } from 'react';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
+
+enableReactTracking({
+    auto: true,
+});
+
+
+// Import your global CSS file
+import "../global.css"
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
