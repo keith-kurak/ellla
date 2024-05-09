@@ -7,6 +7,14 @@ import { useEffect } from 'react';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
+import { configureObservablePersistence } from '@legendapp/state/persist'
+import { ObservablePersistMMKV } from '@legendapp/state/persist-plugins/mmkv'
+
+// Global configuration
+configureObservablePersistence({
+    // Use react-native-mmkv in React Native
+    pluginLocal: ObservablePersistMMKV
+})
 
 enableReactTracking({
     auto: true,
